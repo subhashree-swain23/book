@@ -1,0 +1,288 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Root Colors */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --highlight-color: #f39c12;
+    --bg-light: #f1f1f1;
+    --text-dark: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/1600x900/?office,workspace') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Content Styling */
+.hero-content {
+    text-align: center;
+    padding: 80px 20px; /* Add padding to give space around content */
+}
+
+/* Hero Content - H1 and P adjustments */
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px; /* Space between the title and paragraph */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px; /* Space between paragraph and button */
+}
+
+/* CTA Button Styling */
+.cta-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(243, 156, 18, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 10px; /* Adjust as needed */
+    text-decoration: none;
+}
+
+
+.cta-btn:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0px 8px 20px rgba(243, 156, 18, 0.6);
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    text-align: center;
+    color: #fff;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--text-dark);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #9b59b6, #8e44ad);
+    text-align: center;
+    color: #fff;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    color: var(--text-dark);
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.step:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.step h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.step p {
+    color: var(--text-dark);
+}
+
+/* Rooms & Resources Section */
+.rooms-resources {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    text-align: center;
+    color: #fff;
+}
+
+.room {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    vertical-align: top;
+}
+.room-image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.room:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.room h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.room p {
+    color: #666;
+}
+
+.book-btn {
+    padding: 10px 15px;
+    background-color: var(--highlight-color);
+    border: none;
+    color: #333;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.book-btn:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0px 8px 20px rgba(243, 156, 18, 0.6);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #34495e, #2c3e50);
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 14px;
+}

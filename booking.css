@@ -1,0 +1,240 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077b6;
+    padding: 1em;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd4b;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #0077b6;
+}
+
+h3 {
+    color: #333;
+}
+
+/* Room Cards Section */
+.rooms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+}
+
+.room {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid #0077b6;
+}
+.room-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* Hover Effect for Pop-out */
+.room:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #ffdd4b;
+}
+
+/* Room Card Details */
+.room h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #0077b6;
+}
+
+.room p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.book-btn {
+    background-color: #ffdd4b;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #ffb703;
+}
+
+/* Booking Form Styling */
+.booking-form {
+    background-color: #ffffff;
+    padding: 2em;
+    margin-top: 2em;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #0077b6;
+}
+
+.booking-form label {
+    display: block;
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="datetime-local"],
+.booking-form select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.booking-form fieldset {
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+/* Booking Form Buttons */
+#confirm-booking,
+#cancel-booking {
+    padding: 0.5em 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+#confirm-booking {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+#cancel-booking {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#confirm-booking:hover {
+    background-color: #005f8d;
+}
+
+#cancel-booking:hover {
+    background-color: #d32f2f;
+}
+
+/* Bookings List Section */
+.bookings {
+    background-color: #ffffff;
+    padding: 2em;
+    margin-top: 2em;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0077b6;
+}
+
+/* Status Message */
+.status-message {
+    margin-top: 1em;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Error Message (for invalid credentials) */
+.error-message {
+    color: #f44336;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #0077b6;
+    color: #fff;
+    margin-top: 2em;
+}
+
+/* Time Validation Message */
+.time-validation-message {
+    color: #f44336;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+}
+.footer-content .socials li {
+  margin: 0 10px;
+}
+
+.footer-content .socials a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-content .socials a:hover {
+  color: #ff6347;
+}
+

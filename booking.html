@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking System</title>
+    <link rel="stylesheet" href="booking.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Room Scheduler</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="sign.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rooms">
+            <h2>Available Rooms</h2>
+            <div class="room" id="room-1">
+                <img src="MEET1.jpg" alt="" class="room-image">
+                <h3>Meeting Room 1</h3>
+                <p>Seats 8 people</p>
+                <a href="#booking-form"><button class="book-btn" onclick="openBookingForm(1)">Book Now</button></a>
+            </div>
+            <div class="room" id="room-2">
+                <img src="MEET2.jpg" alt="" class="room-image">
+                <h3>Meeting Room 2</h3>
+                <p>Seats 12 people</p>
+                <a href="#booking-form"><button class="book-btn" onclick="openBookingForm(2)">Book Now</button></a>
+            </div>
+            <div class="room" id="room-3">
+                <img src="Conference.jpg" alt="" class="room-image">
+                <h3>Conference Room</h3>
+                <p>Seats 20 people</p>
+                <a href="#booking-form"><button class="book-btn" onclick="openBookingForm(3)">Book Now</button></a>
+            </div>
+            <div class="room" id="room-4">
+                <img src="VIP.jpg" alt="" class="room-image">
+                <h3>VIP Room</h3>
+                <p>Seats 4 VIP members</p>
+                <a href="#booking-form"><button class="book-btn" onclick="openBookingForm(4)">Book Now</button></a>
+            </div>
+            <div class="room" id="room-5">
+                <img src="Seminar.jpg" alt="" class="room-image">
+                <h3>Seminar Hall</h3>
+                <p>Seats 50 people</p>
+                <a href="#booking-form"><button class="book-btn" onclick="openBookingForm(5)">Book Now</button></a>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <div class="booking-form" id="booking-form">
+            <h2>Book a Room and Resources</h2>
+            <label for="room-select">Select Room:</label>
+            <select id="room-select">
+                <option value="1">Meeting Room 1</option>
+                <option value="2">Meeting Room 2</option>
+                <option value="3">Conference Room</option>
+                <option value="4">VIP Room</option>
+                <option value="5">Seminar Hall</option>
+            </select>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="office-id">Your Office ID:</label>
+            <input type="text" id="office-id" placeholder="Enter your office ID" required>
+
+            <label for="from-time">From Time:</label>
+            <input type="datetime-local" id="from-time" required>
+
+            <label for="time-range">Booking Time (Duration in hours):</label>
+            <input type="number" id="time-range" min="1" placeholder="Enter duration in hours" required>
+
+            <!-- Additional Resources -->
+            <fieldset>
+                <legend>Additional Resources (Choose at least one):</legend>
+                <label for="projector">
+                    <input type="checkbox" id="projector" required> Projector
+                </label><br>
+                <label for="whiteboard">
+                    <input type="checkbox" id="whiteboard" required> Whiteboard
+                </label><br>
+                <label for="laptop">
+                    <input type="checkbox" id="laptop" required> Laptop
+                </label><br>
+            </fieldset>
+
+            <!-- Error message -->
+            <div id="error-message" style="color: red; margin-bottom: 15px;"></div>
+
+            <button id="confirm-booking" onclick="confirmBooking()">Confirm Booking</button>
+            <button id="cancel-booking" onclick="closeBookingForm()">Cancel</button>
+        </div>
+
+        <!-- Bookings List -->
+        <section class="bookings" id="bookings-section">
+            <h2>Current Bookings</h2>
+            <div id="bookings-list"></div>
+        </section>
+
+        <!-- Confirmation Message -->
+        <div id="status" class="status-message"></div>
+    </main>
+
+    <footer>
+        <p>Powered by Room Scheduler</p>
+        <div class="footer-bottom">
+            <p>&copy; Subhashree swain. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="booking.js"></script>
+    
+</body>
+</html>
